@@ -1,6 +1,6 @@
-# vue-project
+# Игровая механика Memory
 
-This template should help get you started developing with Vue 3 in Vite.
+Соберите все пары картинок за ограниченное время
 
 ## Recommended IDE Setup
 
