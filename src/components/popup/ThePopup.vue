@@ -3,23 +3,29 @@
     <div class="content">
       <button class="close" @click="close" />
 
-      <hello-popup v-if="mainState.popupName === 'HelloPopup'" @close="close" />
-      <email-popup v-if="mainState.popupName === 'EmailPopup'" />
-      <final-popup v-if="mainState.popupName === 'FinalPopup'" @close="close" />
-      <time-over-popup v-if="mainState.popupName === 'TimeOverPopup'" @close="close" />
+      <component :is="getPopup" @close="close" />
     </div>
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { mainState, mainMethods } from '../../store/store';
 import HelloPopup from './components/HelloPopup.vue';
 import FinalPopup from './components/FinalPopup.vue';
 import EmailPopup from './components/EmailPopup.vue';
 import TimeOverPopup from './components/TimeOverPopup.vue';
 
+const popups = {
+  HelloPopup,
+  FinalPopup,
+  EmailPopup,
+  TimeOverPopup,
+};
+
+const getPopup = computed(() => popups[mainState.popupName]);
+
 const close = () => {
-  document.body.style.overflowY = 'scroll';
   mainMethods.setPopupName('');
 };
 </script>

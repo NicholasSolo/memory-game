@@ -12,8 +12,8 @@
             type="text"
             :class="['name', { _error: state.errors.includes('name') }]"
             placeholder="Имя"
-            @input="filterInput"
-            @blur="filterInput"
+            @input="filterInput($event, 'name')"
+            @blur="filterInput($event, 'name')"
             @focus="clearError('name')"
           />
 
@@ -26,6 +26,8 @@
             type="text"
             :class="['email', { _error: state.errors.includes('email') }]"
             placeholder="Email"
+            @input="filterInput($event, 'email')"
+            @blur="filterInput($event, 'email')"
             @focus="clearError('email')"
           />
 
@@ -74,8 +76,14 @@ const getNameErrorText = computed(() => {
   return !state.name ? 'Введите имя' : 'Введите корректное имя';
 });
 
-const filterInput = ({ target }) => {
-  target.value = target.value.replace(/[^А-Яа-яёЁ\s]/gi, '');
+const filterInput = ({ target }, type) => {
+  if (type === 'name') {
+    target.value = target.value.replace(/[^А-Яа-яёЁ\s]/gi, '');
+  }
+
+  if (type === 'email') {
+    target.value = target.value.replace(/[А-Яа-яёЁ\s]/gi, '');
+  }
 };
 
 const clearError = err => {

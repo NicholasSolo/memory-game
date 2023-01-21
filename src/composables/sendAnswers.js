@@ -14,11 +14,13 @@ export default async function (body) {
     if (response.ok) {
       data = await response.json();
     } else {
-      data = false;
+      data = {
+        isOldUser: Math.random() <= 0.5,
+      };
     }
   } catch (e) {
     data = {
-      isOldUser: false,
+      isOldUser: Math.random() <= 0.5,
     };
   }
 

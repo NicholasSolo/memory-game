@@ -24,7 +24,7 @@
           class="support-link"
           v-text="mainState.gameData.footerEmail.value"
         />
-        <p class="ooc-copyright">&copy; Out Of Cloud. {{ currentYear }}. All rights reserved.</p>
+        <p class="ooc-copyright">&copy; {{ currentYear }}. All rights reserved.</p>
       </div>
     </div>
   </footer>

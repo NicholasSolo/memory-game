@@ -1,47 +1,22 @@
 window.state = {
-  // выбор темы
-  theme: {
-    type: 'select',
-    title: 'Тема оформления',
-    placeholder: 'Тема',
-    default: 'main',
-    value: 'main',
-    options: [
-      {
-        value: 'main',
-        title: 'Стандартная',
-      },
-      {
-        value: 'dark',
-        title: 'Темная',
-      },
-    ],
-  },
-
   // инфо-блок
   logo: {
     type: 'text',
     title: 'Ссылка на логотип',
     placeholder: 'Лого',
-    value: 'https://static.tildacdn.com/tild6432-3333-4962-b864-363866663437/logoOOC1.svg',
+    value: 'https://cdn-icons-png.flaticon.com/512/5968/5968866.png',
   },
   logoLink: {
     type: 'text',
     title: 'Ссылка на сайт клиента',
     placeholder: 'Ссылка',
-    value: 'https://v3.ru.vuejs.org/',
+    value: 'https://github.com/NicholasSolo',
   },
   header: {
     type: 'text',
     title: 'Текст заголовка',
     placeholder: 'Введите текст',
     value: 'Найдите пару для каждого изображения',
-  },
-  subtitle: {
-    type: 'text',
-    title: 'Текст подзаголовка',
-    placeholder: 'Введите текст',
-    value: 'Получите ценные подарки',
   },
   description: {
     type: 'text',
@@ -170,7 +145,7 @@ window.state = {
       type: 'text',
       title: 'Подзаголовок приветственного попапа',
       placeholder: 'Введите текст',
-      value: 'Можно добавить доп.описание. Если не нужно, просто оставить это поле пустым',
+      value: '',
     },
   },
   emailPopup: {

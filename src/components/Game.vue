@@ -128,8 +128,6 @@ const clickHandler = arg => {
             resetTime();
             mainState.isGameActive = false;
 
-            document.body.style.overflowY = 'hidden';
-
             mainMethods.setPopupName('EmailPopup');
 
             totalItems.value = [];
@@ -159,8 +157,6 @@ const startGame = () => {
     startTimer(() => {
       mainState.isGameActive = false;
       resetTime();
-
-      document.body.style.overflowY = 'hidden';
 
       // если первый раз не собрал все пары, перемешиваем поле
       shuffleField();

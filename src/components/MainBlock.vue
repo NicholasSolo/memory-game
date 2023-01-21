@@ -1,7 +1,6 @@
 <template>
   <div class="main-block">
     <h4 class="title" v-html="mainState.gameData.header.value" />
-    <p class="subtitle" v-html="mainState.gameData.subtitle.value" />
     <p v-if="!mainState.isGameActive" class="text" v-html="mainState.gameData.description.value" />
 
     <game />
@@ -35,13 +34,6 @@ import Game from './Game.vue';
     color: #e21a1a;
   }
 
-  .subtitle {
-    margin-bottom: 45px;
-    font-size: 24px;
-    line-height: 33px;
-    text-align: center;
-  }
-
   .text {
     max-width: 570px;
     margin-bottom: 36px;
@@ -67,12 +59,6 @@ import Game from './Game.vue';
       margin-bottom: 10px;
       font-size: 40px;
     }
-
-    .subtitle {
-      margin-bottom: 33px;
-      font-size: 22px;
-      line-height: 30px;
-    }
   }
 }
 
@@ -84,12 +70,6 @@ import Game from './Game.vue';
       margin-bottom: 11px;
       font-size: 36px;
       text-align: center;
-    }
-
-    .subtitle {
-      margin-bottom: 16px;
-      font-size: 20px;
-      line-height: 28px;
     }
 
     .text {
@@ -116,11 +96,6 @@ import Game from './Game.vue';
       }
     }
 
-    .subtitle {
-      font-size: 18px;
-      line-height: 20px;
-    }
-
     .text {
       margin-bottom: 47px;
       font-size: 14px;
@@ -136,14 +111,6 @@ import Game from './Game.vue';
     .title {
       margin-bottom: 10px;
       font-size: 26px;
-    }
-
-    .subtitle {
-      max-width: 290px;
-      margin-bottom: 22px;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
     }
 
     .text {

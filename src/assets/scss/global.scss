@@ -6,7 +6,7 @@
   padding: 0;
   font-family: 'Circe', sans-serif;
   font-weight: 400;
-  transition: all .25s;
+  transition: all 0.25s;
 }
 
 html {
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: #e5c9b7;
+    background-color: #ffbc96;
 
     .container {
       width: 100vw;
@@ -60,17 +60,16 @@ ul {
   margin: 0 auto;
   padding: 0 20px;
 
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width: 1200px) {
     max-width: 1080px;
   }
-  @media screen and (max-width:960px) {
+  @media screen and (max-width: 960px) {
     max-width: 900px;
   }
-  @media screen and (max-width:800px) {
+  @media screen and (max-width: 800px) {
     max-width: 660px;
   }
-  @media screen and (max-width:500px) {
+  @media screen and (max-width: 500px) {
     max-width: 360px;
   }
-
 }
